@@ -38,6 +38,25 @@
   td:last-child{font-weight:600}
   tr:last-child td{border-bottom:0}
 
+  .zips-row td,
+  .zips-row td:first-child,
+  .zips-row td:last-child{
+    width:auto;padding-right:0;color:inherit;font-weight:400;
+  }
+  .zip-head{color:var(--slate);font-weight:400;margin-bottom:8px}
+  .zips{
+    display:grid;
+    grid-template-columns:repeat(3,max-content);
+    column-gap:28px;
+    row-gap:6px;
+  }
+  .zips span{
+    white-space:nowrap;
+    font-weight:600;
+    font-variant-numeric:tabular-nums;
+  }
+  .zips .zip{display:inline-block;width:4.6ch;margin-right:8px}
+
   ol{margin:0;padding-left:20px} ol li{margin-bottom:9px}
   .lead-in{margin:0 0 16px;color:var(--slate)}
 
@@ -60,6 +79,7 @@
     td{display:block;border-bottom:0;padding:2px 0}
     td:first-child{width:auto;padding-top:12px}
     tr{display:block;border-bottom:1px solid var(--line);padding-bottom:10px}
+    .zips{grid-template-columns:1fr;}
   }
 </style>
 </head>
@@ -98,7 +118,18 @@
     <h2>Buy box</h2>
         <table>
       <tr><td>Markets</td><td>Indianapolis-Carmel-Greenwood, IN &middot; CBSA 26900</td></tr>
-      <tr><td>Target ZIP codes (23)</td><td>46016, 46218, 46222, 46203, 46235, 46241, 46201, 46225, 46229, 46226, 46208, 46221, 46107, 46254, 46012, 46013, 46227, 46214, 46011, 46219, 46224, 46001, 46176</td></tr>
+      <tr class="zips-row"><td colspan="2">
+        <div class="zip-head">Target ZIP codes (7)</div>
+        <div class="zips">
+          <span><span class="zip">46220</span> Broad Ripple</span>
+          <span><span class="zip">46204</span> Mass Ave</span>
+          <span><span class="zip">46268</span> Augusta Pike</span>
+          <span><span class="zip">46278</span> Augusta</span>
+          <span><span class="zip">46203</span> Fountain Square</span>
+          <span><span class="zip">46201</span> Near Eastside</span>
+          <span><span class="zip">46225</span> Bates-Hendricks</span>
+        </div>
+      </td></tr>
       <tr><td>Price range</td><td>$60,000 &ndash; $250,000 all-in basis</td></tr>
       <tr><td>Property type</td><td>Single Family, Townhouse, Condo, Duplex, Triplex, Fourplex, Multi-Family</td></tr>
       <tr><td>Condition</td><td>Any &mdash; light cosmetic through full gut</td></tr>
