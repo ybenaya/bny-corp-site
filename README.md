@@ -4,15 +4,16 @@ The one-page site for BNY, served by GitHub Pages at https://bny-corp.com.
 
 ## Do not edit `index.html` here
 
-It is generated. The source lives in the private `us-deal-flow` repository, and
-everything it says about the buy box — the market, the price band, the ZIP list
-— is derived from `config/markets/indianapolis.yaml` there. Editing this copy
-means the next deploy silently reverts it.
+It is generated. The source lives in the private `us_deal_flow` working tree
+(`ybenaya/us-deal-flow` on GitHub), and everything it says about the buy box —
+the market, the price band, the ZIP list — is derived from
+`config/markets/indianapolis.yaml` there. Editing this copy means the next deploy
+silently reverts it.
 
 To change what the page says:
 
 ```
-# in the us-deal-flow working copy
+# in the us_deal_flow working copy
 us-deal-flow publish                       # regenerate from the market config
 Copy-Item site/dist/index.html ../bny-corp-site/index.html
 git -C ../bny-corp-site commit -am "Update buy box" && git -C ../bny-corp-site push
